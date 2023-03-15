@@ -1,19 +1,30 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { View, Text, Button } from 'react-native';
+import { RouteProp, NavigationProp } from '@react-navigation/native';
+import { RootStackParamList } from '../../StackNavigator';
+import { styles } from '../../styles';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Todo</Text>
-    </View>
-  );
+type LegislationRouteProp = RouteProp<RootStackParamList, 'Legislation'>;
+type LegislationNavigationProp = NavigationProp<RootStackParamList, 'Legislation'>;
+
+interface Props {
+  route: LegislationRouteProp;
+  navigation: LegislationNavigationProp;
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+const Legislation = ({ route, navigation }: Props) => {
+  const { bill } = route.params;
+
+  return (
+    <View style={styles.container}>
+      <Text style={styles.primaryText}>{bill.title}</Text>
+      <Button
+        title="Submit"
+        color={styles.secondaryText.color}
+        onPress={() => navigation.navigate('BillStack', { name: 'Bills' })}
+      />
+    </View>
+  );
+};
+
+export default Legislation;

@@ -10,9 +10,11 @@ import Bills from './screens/Bills';
 import Sent from './screens/Sent';
 import Profile from './screens/Profile';
 import Whitepaper from './screens/Whitepaper';
+import Legislation from './screens/Legislation';
 
 export type RootStackParamList = {
   Login: {};
+  BillStack: {},
   Bills: {};
   Sent: {};
   Profile: {};
@@ -69,8 +71,8 @@ function StackNavigator() {
         }}
       >
         <Stack.Screen name="Login" component={Login} options={{ title: 'legislate.me', headerShown: false }} />
-        <Stack.Screen name="Bills" component={TabNavigator} options={{ title: 'legislate.me' }} />
-        <Stack.Screen name="Bills" component={Legislation} options={{ title: 'legislate.me' }} />
+        <Stack.Screen name="BillStack" component={TabNavigator} options={{ title: 'legislate.me' }} />
+        <Stack.Screen name="Legislation" component={Legislation} options={{ title: 'legislate.me' }} />
       </Stack.Navigator>
     </NavigationContainer>
   );

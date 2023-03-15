@@ -1,7 +1,9 @@
 import React from 'react';
-import { View, Text, ScrollView, StyleSheet } from 'react-native';
+import { Text, ScrollView, TouchableOpacity } from 'react-native';
 import { NavigationProp } from '@react-navigation/native';
 import { RootStackParamList } from '../../StackNavigator';
+import { styles } from '../../styles';
+import billist from './bills.json';
 
 type BillsNavProp = NavigationProp<RootStackParamList, 'Legislation'>;
 
@@ -9,34 +11,22 @@ interface Props {
   navigation: BillsNavProp;
 }
 
-const Categories = ({ navigation }: Props) => {
-
+const Bills = ({ navigation }: Props) => {
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <View style={styles.category}>
-        <Text style={styles.categoryTitle} onPress={() => navigation.navigate('Legislation', { name: 'Legislation' })}>
-        Aboriginal Land Grant (Jervis Bay Territory) Amendment (Strengthening Land and Governance Provisions) Bill 2022
-        </Text>
-      </View>
+      {billist.map((section, index) => (
+        <React.Fragment key={index}>
+          <TouchableOpacity
+            onPress={() =>
+              navigation.navigate('Legislation', { bill: section })
+            }
+          >
+            <Text style={styles.primaryText}>{section.title}</Text>
+          </TouchableOpacity>
+        </React.Fragment>
+      ))}
     </ScrollView>
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flexGrow: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  category: {
-    padding: 10,
-    borderBottomWidth: 1,
-    borderBottomColor: '#ddd',
-    width: '100%',
-  },
-  categoryTitle: {
-    fontSize: 18,
-  },
-});
-
-export default Categories;
+export default Bills;
