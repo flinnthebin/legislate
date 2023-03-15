@@ -44,9 +44,9 @@ you might have from watching. Thank you for participating!
 
 ## Questions
 
-    Do you feel you have a reasonable understanding of The Aboriginal Land Grant (Jervis Bay Territory) Amendment (Strengthening Land and Governance Provisions) Bill 2022?
-    What would be your thoughts on programs similar to the home ownership style leases introduced in the amendment being applied in other states/territories?
-    What are your thoughts on empowering the community such that with the signatures of 10% of the registered members, they may initiate the process of calling
+1.  Do you feel you have a reasonable understanding of The Aboriginal Land Grant (Jervis Bay Territory) Amendment (Strengthening Land and Governance Provisions) Bill 2022?
+2.  What would be your thoughts on programs similar to the home ownership style leases introduced in the amendment being applied in other states/territories?
+3.  What are your thoughts on empowering the community such that with the signatures of 10% of the registered members, they may initiate the process of calling
     a special general meeting to remove the executive committee?
-    What are your thoughts on the establishment of a CEO position to administer the council's affairs in accordance with the general directions of the executive committee?
-    What are your thoughts on the expansion of the powers of the Registrar?
+4.  What are your thoughts on the establishment of a CEO position to administer the council's affairs in accordance with the general directions of the executive committee?
+5.  What are your thoughts on the expansion of the powers of the Registrar?

@@ -1,26 +1,22 @@
 import React from 'react';
-import { NavigationContainer, useNavigation } from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { styles } from './styles';
 
 import Login from './screens/Login';
-import Categories from './screens/Categories';
-import Legislation from './screens/Legislation';
-import BillDetails from './screens/BillDetails';
-import EmailSent from './screens/EmailSent';
-import Error from './screens/Error';
-import About from './screens/About';
+import Bills from './screens/Bills';
+import Sent from './screens/Sent';
+import Profile from './screens/Profile';
+import Whitepaper from './screens/Whitepaper';
 
 export type RootStackParamList = {
   Login: {};
-  Categories: {};
-  Legislation: {};
-  BillDetails: {};
-  EmailSent: {};
-  Error: {};
-  About: {};
+  Bills: {};
+  Sent: {};
+  Profile: {};
+  Whitepaper: {};
 };
 
 
@@ -51,10 +47,10 @@ function TabNavigator() {
         tabBarStyle: styles.footer,
       })}
     >
-      <Tab.Screen name="Bills" component={Categories} />
-      <Tab.Screen name="Sent" component={Error} />
-      <Tab.Screen name="Profile" component={Error} />
-      <Tab.Screen name="Whitepaper" component={Error} />
+      <Tab.Screen name="Bills" component={Bills} />
+      <Tab.Screen name="Sent" component={Sent} />
+      <Tab.Screen name="Profile" component={Profile} />
+      <Tab.Screen name="Whitepaper" component={Whitepaper} />
     </Tab.Navigator>
   );
 }
@@ -72,12 +68,10 @@ function StackNavigator() {
         }}
       >
         <Stack.Screen name="Login" component={Login} options={{ title: 'legislate.me', headerShown: false }} />
-        <Stack.Screen name="Categories" component={TabNavigator} options={{ title: 'legislate.me' }} />
-        <Stack.Screen name="Legislation" component={Legislation} options={{ title: 'legislate.me' }} />
-        <Stack.Screen name="BillDetails" component={BillDetails} options={{ title: 'legislate.me' }} />
-        <Stack.Screen name="EmailSent" component={EmailSent} options={{ title: 'legislate.me' }} />
-        <Stack.Screen name="Error" component={Error} options={{ title: 'legislate.me' }} />
-        <Stack.Screen name="About" component={About} options={{ title: 'legislate.me' }} />
+        <Stack.Screen name="Bills" component={TabNavigator} options={{ title: 'legislate.me' }} />
+        <Stack.Screen name="Sent" component={Sent} options={{ title: 'legislate.me' }} />
+        <Stack.Screen name="Profile" component={Profile} options={{ title: 'legislate.me' }} />
+        <Stack.Screen name="Whitepaper" component={Whitepaper} options={{ title: 'legislate.me' }} />
       </Stack.Navigator>
     </NavigationContainer>
   );

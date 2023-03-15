@@ -1,4 +1,6 @@
-# Executive Summary
+# Legislate.Me: Interactive Art for Political Expression
+
+## Executive Summary
 
 Legislate.Me is an interactive art installation in the form of an application, designed to enable citizens of Australia to utilize their freedom of political expression. By engaging with the application, users can learn about bills currently before the Australian Federal Parliament, express their opinions on the proposed legislation, and send their thoughts directly to their local federal member of parliament (MP). The application uses Google OAuth for user authentication and is free to use, with the potential for a nominal fee if usage exceeds a certain threshold.
 
