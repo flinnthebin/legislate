@@ -1,19 +1,20 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import {ScrollView, Text} from 'react-native';
+import { RootStackParamList } from '../../StackNavigator';
+import { styles } from '../../styles';
+import whitepaper from './whitepaper.json';
 
-export default function App() {
+const WhitepaperScreen = () => {
   return (
-    <View style={styles.container}>
-      <Text>Todo</Text>
-    </View>
+    <ScrollView style={styles.container}>
+      {whitepaper.map((section, index) => (
+        <React.Fragment key={index}>
+          <Text style={styles.primaryText}>{section.title}</Text>
+          <Text style={styles.secondaryText}>{section.content}</Text>
+        </React.Fragment>
+      ))}
+    </ScrollView>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default WhitepaperScreen;
