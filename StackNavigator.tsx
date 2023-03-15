@@ -17,6 +17,7 @@ export type RootStackParamList = {
   Sent: {};
   Profile: {};
   Whitepaper: {};
+  Legislation: {};
 };
 
 
@@ -69,9 +70,7 @@ function StackNavigator() {
       >
         <Stack.Screen name="Login" component={Login} options={{ title: 'legislate.me', headerShown: false }} />
         <Stack.Screen name="Bills" component={TabNavigator} options={{ title: 'legislate.me' }} />
-        <Stack.Screen name="Sent" component={Sent} options={{ title: 'legislate.me' }} />
-        <Stack.Screen name="Profile" component={Profile} options={{ title: 'legislate.me' }} />
-        <Stack.Screen name="Whitepaper" component={Whitepaper} options={{ title: 'legislate.me' }} />
+        <Stack.Screen name="Bills" component={Legislation} options={{ title: 'legislate.me' }} />
       </Stack.Navigator>
     </NavigationContainer>
   );

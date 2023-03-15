@@ -21,7 +21,7 @@ const Login = ({ navigation }: Props) => {
         <Button
           title="Login"
           color={styles.secondaryText.color}
-          onPress={() => navigation.navigate('Categories')}
+          onPress={() => navigation.navigate('Bills', { name: 'Bills' })}
         />
       </View>
     </View>
