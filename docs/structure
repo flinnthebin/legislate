@@ -1,0 +1,14 @@
+    Structure
+    
+    Login.tsx - This file should contain the code for the login screen that allows users to log in using Google OAuth.
+
+    CategoryList.tsx - This file should contain the code for the main page that presents the user with a scroll wheel of 10 categories of legislation.
+
+    LegislationList.tsx - This file should contain the code for the second scroll wheel of the legislation currently in parliament (bill1, bill2, bill3) that is displayed when a user clicks on a specific category.
+
+    BillDetails.tsx - This file should contain the code for the page that displays information about a specific bill. It should include the 5-minute explanatory video and the 5 questions about the bill that the user needs to answer.
+
+    ProfanityFilter.tsx - This file should contain the code for the profanity filter that checks the user's responses for any inappropriate language.
+
+    SubmitButton.tsx - This file should contain the code for the submit button that sends the user's responses to their local member of parliament via the Gmail API.
+

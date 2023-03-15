@@ -1,0 +1,4 @@
+#Wed Mar 15 19:15:55 AEDT 2023
+base.0=/home/chris/.documents/legislate/android/app/build/intermediates/dex/release/mergeDexRelease/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
